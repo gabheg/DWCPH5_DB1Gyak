@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1635256678 source:c:\users\gabe\documents\db1gyak\cprog\hg_2.5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
