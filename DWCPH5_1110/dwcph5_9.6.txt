@@ -1,0 +1,57 @@
+CREATE TABLE TULAJDONOS (
+    TKod int(3),
+    Nev varchar(20) NOT NULL,
+    Varos Varchar(20),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE AUTO (
+    Rendszam char(7),
+    Tipus varchar(25) NOT NULL,
+    Szin varchar(15),
+    Kor int(2),
+    Ar int(8),
+    Tulaj int(3),
+    FOREIGN KEY (Tulaj) REFERENCES Tulajdonos(Tkod)
+);
+
+Insert Into Tulajdonos Values(101, 'Kis János', 'Miskolc');
+Insert Into Tulajdonos Values(102, 'Kis Éva', 'Szerencs');
+Insert Into Tulajdonos Values(103, 'Retek Ödön', 'Miskolc');
+Insert Into Tulajdonos Values(104, 'Virág Zoltán', 'Nyék');
+Insert Into Tulajdonos Values(105, 'Nagy Eszer', 'Nyék');
+Insert Into Tulajdonos Values(106, 'Kovács Magor', 'Szerencs');
+Insert Into Tulajdonos Values(107, 'Asztal Antal', 'Miskolc');
+
+Insert Into Auto Values('FER-831','Opel Corsa','Piros',18,390,101);
+Insert Into Auto Values('TXJ-239','Suzuki Swift','Zöld',15,450,105);
+Insert Into Auto Values('JAH-425','Skoda Fabia','Piros',13,620,102);
+Insert Into Auto Values('MLM-211','Toyota Yaris','Fehér',3,1850,105);
+Insert Into Auto Values('KFT-204','Opel Astra','Szürke',7,1250,106);
+Insert Into Auto Values('JCD-443','Opel Astra','Fehér',12,990,107);
+Insert Into Auto Values('KAP-290','BMW 316','Fekete',6,3250,102);
+Insert Into Auto Values('GDF-525','Renault Twingo','Fekete',16,280,Null);
+Insert Into Auto Values('HUB-936','Suzuki Swift','Fekete',16,500,Null);
+
+1.
+
+SELECT Auto.Rendszam Tulajdonos.Nev
+FROM Auto
+JOIN Tulajdonos
+ON Auto.Tulaj=Tulajdonos.Tkod
+ORDER BY columname;
+
+2.
+
+SELECT* FROM Auto
+INNER JOIN Tulajdonos on Tulajdonos.Tkod = Auto.Tulaj;
+WHERE Tulajdonos.Varos = 'Miskolc';
+
+3.
+
+SELECT Auto.Tipus, Auto.Ar, Auto.Szin;
+
+4.
+
+
+
