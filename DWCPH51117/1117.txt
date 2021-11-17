@@ -1,0 +1,39 @@
+create table GYARTO (
+    adoszam int NOT NULL,
+    nev varchar(30),
+    telephely varchar(30),
+    irsz varchar(4),
+    varos varchar(40),
+    utca varchar(100),
+    PRIMARY KEY (adoszam)
+);
+
+create table TERMEK (
+    tkod int NOT NULL,
+    nev varchar(50),
+    ear number,
+    CHECK (ear>0),
+    gyarto int NOT NULL,
+    PRIMARY KEY (tkod);
+    FOREIGN KEY (gyarto) REFERENCES GYARTO(adoszam),
+);
+
+create table EGYSEGEK (
+    aru number,
+    db number,
+    CHECK (db>0),
+    FOREIGN KEY (aru) REFERENCES TERMEK(tkod)
+);
+
+create table ALKATRESZ (
+    akod number,
+    nev varchar(50),
+    PRIMARY KEY (akod)  
+);
+
+create table KOMPONENS (
+    termek number,
+    alkatresz number,
+    FOREIGN KEY (termek) REFERENCES TERMEK(tkod),
+    FOREIGN KEY (alkatresz) REFERENCES ALKATRESZ(akod)
+);
