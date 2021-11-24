@@ -1,0 +1,12 @@
+insert into oktató values (ABC123, Gibsz Jakab, IIT);
+insert into oktató values (ABC456, Nagy Árpád, AIF);
+insert into oktató values (DEF234, Kiss Tibor, IIT);
+insert into oktató values (EFG345, Magyar Áron, AIF);
+insert into oktató values (FGH456, Koller Klára, IIT);
+
+insert into tárgy values (ABC123, GEIAL312, 5, Prog);
+insert into tárgy values (ABC456, GEIAL313, 5, Progb);
+insert into tárgy values (ABC123, GEIAL323, 5, Szoft);
+insert into tárgy values (DEF234, GEIAL324, 5, Szoftc);
+insert into tárgy values (FGH456, GEIAL302, 5, Fizika);
+

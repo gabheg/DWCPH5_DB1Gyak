@@ -7,7 +7,7 @@ create table Oktató (
 
 create table Tárgy (
     okód varchar(6),
-    kód int,
+    kód varchar(10),
     kredit int,
     megnev varchar(50),
     primary key (kód),
