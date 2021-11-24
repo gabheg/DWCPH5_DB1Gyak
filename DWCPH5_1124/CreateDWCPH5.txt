@@ -1,0 +1,35 @@
+create table Oktató (
+    neptunkód varchar(6),
+    név varchar(50),
+    tanszék varchar(50),
+    primary key (neptunkód)
+);
+
+create table Tárgy (
+    okód int,
+    kód int,
+    kredit int,
+    megnev varchar(50),
+    primary key (kód),
+    foreign key (okód) references Oktató(neptunkód)
+);
+
+create table Hallgató (
+    neptunkód varchar(6),
+    név varchar(50),
+    tankör varchar(50),
+    szül_d date,
+    cím varchar(50),
+    primary key(neptunkód)
+);
+
+create table Hallgar (
+    tkód int,
+    kód int,
+    kredit int,
+    hkód int,
+    primary key (kód),
+    foreign key (tkód) references tárgy(kód),
+    foreign key (hkód) references hallgató(neptunkód)
+);
+
