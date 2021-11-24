@@ -6,7 +6,7 @@ create table Oktató (
 );
 
 create table Tárgy (
-    okód int,
+    okód varchar(6),
     kód int,
     kredit int,
     megnev varchar(50),
