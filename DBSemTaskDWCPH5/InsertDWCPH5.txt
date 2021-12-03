@@ -1,0 +1,59 @@
+Cég:
+Insert into Company values(3600, 'Ózd', 'Nemzetor_ut', 1, 'AE1234567', 'Labda and Co', 'Sportszer');
+Alkalmazott:
+Insert into Employee values (‘AE1234567’, 'Mata Anna’, ‘1987-09-22’, ‘Female’, 1);
+Insert into Employee values (‘AE1234567’, ‘Albert Zsolt’, ‘1970-01-15’, ‘Male’, 2);
+Insert into Employee values (‘AE1234567’, ‘Kalmar Bela’, ‘1965-02-02’,‘Male’, 3);
+Insert into Employee values (‘AE1234567’, ‘Anna Maria’, ‘1989-03-14’, ‘Female’, 4);
+Insert into Employee values (‘AE1234567’, ‘Ella Fitzgerald, ‘1985-05-10’,‘Female’, 5);
+Insert into Employee values (‘AE1234567’, ‘Kiss Gyula’, ‘1992-01-01’, ‘Male’, 6);
+
+Job:
+insert into Job values (1, ’Mernok’);
+insert into Job values (2, ’Sor’);
+insert into Job values (3, ’Darus’);
+insert into Job values (4, ’HR’);
+insert into Job values (5, ’Fordító’);
+insert into Job values (6, ’CEO’);
+
+
+Gépek:
+Insert into Machines values (‘123456789’, ‘2021-12-30’, ‘2020-12-30’, ‘Froccsonto’, ‘muanyag szelep’);
+Insert into Machines values (‘143456789’, ‘2022-02-30’, ‘2020-11-30’, ‘Daru’,’raklap’);
+Insert into Machines values (‘125456789’, ‘2022-05-30’, ‘2020-10-30’, ‘Eszterga’, ‘Bowling Pin’);
+Insert into Machines values (‘123466789’, ‘2022-03-30’, ‘2020-09-30’, ‘Pres’, ‘Ping pong uto’);
+Insert into Machines values (‘123456769’, ‘2022-04-30’, ‘2020-08-30’, ‘Festo gep’,’Labda boritas’);
+
+Workson kapcsolat táblája:
+Insert into Workson values (1, 123456789, 6);
+Insert into Workson values (1, 125456789, 6);
+Insert into Workson values (3, 143456789, 12);
+Insert into Workson values (2, 123466789, 6);
+Insert into Workson values (2, 123456769, 6;
+
+Termékek:
+Insert into Product values (‘normal’, ‘Ping pong uto’, ‘2021-11-30’, 1, 1500, ‘AE1234567’)
+Insert into Product values (‘high’,’Labda’, ‘2020-10-20’, 2, 2000, ‘AE1234567’);
+Insert into Product values (‘normal’, ‘Bowling Pin’, ‘2020-11-25’, 3, 2500, ‘AE1234567’);
+Insert into Product values (‘high’, ‘teniszuto’, ‘2021-10-12’, 4, 5000,  ‘AE1234567’);
+Insert into Product values (‘normal’, teniszlabda’, ‘2021-09-10’, 5, 100, ‘AE1234567’);
+
+Vásárló:
+Insert into Customer values (‘Male’, 3600, ‘Ózd’, Marcius 15. utca.’, 1, ‘AE1234567’, ‘Ala Bard’, ‘001’);
+Insert into Customer values (‘Male’, 3600, ‘Ózd’, ‘Petofi ter’, 1, ‘AE1234567’, ‘Falo Balazs, ‘002’);
+Insert into Customer values (‘Male’, 3600, ‘Ózd’, ‘Nemzetor ut’, 60, ‘AE1234567’, ‘Karo Antal’, ‘003’);
+Insert into Customer values (‘Male’, 3600, ‘Ózd’, ‘Marcius 15. utca’, 15, ‘AE1234567’, ‘Horvath Zsolt’, ‘C004’);
+Insert into Customer values (‘Male’, 3600, ‘Ózd’, ‘Gyar utca’, 12, ‘AE1234567’, ‘Kala Pal’, ‘005’);
+
+Orders kapcsolat táblája:
+Insert into Orders values (001, 1, ‘2021-11-30’, 2);
+Insert into Orders values (002, 2, ‘2021-11-30’, 50);
+Insert into Orders values (003, 4, ‘2021-10-30’, 2);
+Insert into Orders values (003, 5, ‘2021-10-30’, 50);
+Insert into Orders values (004, 3, ‘2021-11-25’, 100);
+
+Beszállító:
+Insert into Supplier values (1000, 3527, ‘Miskolc’, ‘Sajo ut’, 1,’En es En szallit’,  ‘BE1234567’, ‘AE1234567’); 
+Insert into Supplier values (1500, 3527, ‘Miskolc’, ‘Sajo ut’, 4, ‘A es B is szallit’,  ‘BE2234567’, ‘AE1234567’);
+Insert into Supplier values (1700, 3527, ‘Miskolc’, ‘Sajo ut’, 7, ‘Botos es tarsa’,  ‘BE2334567’, ‘AE1234567’);
+Insert into Supplier values (20000, 3527, ‘Miskolc’, ‘Sajo ut’, 9, ‘Karcsi bt’,  ‘BE4234567’, ‘AE1234567’);

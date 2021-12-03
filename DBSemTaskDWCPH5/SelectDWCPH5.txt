@@ -1,0 +1,32 @@
+Select Name from Employee;
+
+Select Name,DOB From Employee where Sex like 'Male';
+
+Select distinct Name as Gepek_neve from Machines;
+
+Select Pname, Price from Product where Price<2500;
+
+select * from Supplier;
+
+select Customer.Name, Orders.Quantity 
+from Customer 
+inner join Orders on Customer.Cid = Orders.Cid
+group by Name
+order by Name desc;
+
+SELECT Employee.Name, Machines.Name, Workson.Hours
+From ((Workson
+INNER JOIN Machines ON Workson.Mid = Machines.SN)
+INNER JOIN Employee ON Workson.Eid = Employee.Eid);
+
+SELECT Product.Pname, sum(price) FROM Orders
+JOIN Product ON Orders.Pid = Product.pid
+GROUP BY Pname
+HAVING sum(price) >= 5000;
+
+SELECT ZIP, City FROM Customer
+JOIN Orders ON Orders.Cid = Customer.Cid
+Join Product On Orders.Pid = Product.Pid
+WHERE Customer.Sex = 'Male' and Product.Quality= 'Normal'
+AND Orders.quantity = (SELECT MIN(quantity) FROM Orders);
+
