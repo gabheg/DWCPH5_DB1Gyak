@@ -1,0 +1,6 @@
+ALTER TABLE termekek
+ADD szin VARCHAR(12);
+
+DROP TABLE termekek;
+
+DELETE FROM termekek WHERE kategoria = NULL;
