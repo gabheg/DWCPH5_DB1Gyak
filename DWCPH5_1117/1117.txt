@@ -11,11 +11,11 @@ create table GYARTO (
 create table TERMEK (
     tkod int NOT NULL,
     nev varchar(50),
-    ear number,
+    ear INT,
     CHECK (ear>0),
     gyarto int NOT NULL,
-    PRIMARY KEY (tkod);
-    FOREIGN KEY (gyarto) REFERENCES GYARTO(adoszam),
+    PRIMARY KEY (tkod),
+    FOREIGN KEY (gyarto) REFERENCES GYARTO(adoszam)
 );
 
 create table EGYSEGEK (
